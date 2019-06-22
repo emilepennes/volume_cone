@@ -6,20 +6,14 @@ from math import *
 print ("The proposal of the exercice is to calculate the volume of a right cone for any radius r and any height h")
 
 def input_value(x):
-    while True :
+    a = x
+    x = -1
+    while x < 0 :
         try :
-            a = x
-            x = float(input("Let's have "+ str(x) +" = "))
-            while x < 0 :
-                try :
-                    x = a
-                    x = float(input("Let's have positive "+ str(x) +" = "))
-                except ValueError :
-                    print(x, "must be a positive float number ;) Try again...")   
-            return x
+            x = float(input(str(a) +" must be positive. Let's have "+ str(a) +" = "))  
         except ValueError :
-            print(x, "must be a positive float number ;) Try again...")
-    
+            print(str(a), "must be a positive float number ;) Try again...")
+    return x
 
 r = "r"
 h = "h"
