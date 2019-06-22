@@ -1,25 +1,32 @@
 # coding:utf-8
-# The proposal of the exercice is to calculate the volume of a right cone for any radius r and any height h.
+"""The proposal of the exercice is to calculate
+the volume of a right cone for any radius R and any height H.
+"""
 
-from math import *
+from math import pi
 
-print ("The proposal of the exercice is to calculate the volume of a right cone for any radius r and any height h")
+print("The proposal of the exercice is to calculate" +
+      "the volume of a right cone for any radius R and any height H")
 
 def input_value(x):
+    """Input a positive float value"""
     a = x
     x = -1
-    while x < 0 :
-        try :
-            x = float(input(str(a) +" must be positive. Let's have "+ str(a) +" = "))  
-        except ValueError :
+    while x < 0:
+        try:
+            x = float(input(str(a) +" must be positive. Let's have "+ str(a) +" = "))
+        except ValueError:
             print(str(a), "must be a positive float number ;) Try again...")
     return x
 
-r = "r"
-h = "h"
-r = input_value(r)
-h = input_value(h)
+R = "R"
+H = "H"
+R = input_value(R)
+H = input_value(H)
 
-volume = pi * r**2 * h / 3
+VOLUME = pi * R**2 * H / 3
+VOLUME_ROUND = round(VOLUME, 2)
 
-print("the volume of a cone with a radius of " + str(r) + "m and with a height of " + str(h) + "m is " + str(volume) + "m3.")
+print("the volume of a cone with a radius of " + str(R) + "m and with a height of " +
+      str(H) + "m is " + str(VOLUME_ROUND) + "m3.")
+      
